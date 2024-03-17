@@ -23,6 +23,12 @@ class EnvironmentVariables {
   @Max(65535)
   PORT: number;
 
+  @IsNumber()
+  DB_PORT: number;
+
+  @IsString()
+  DB_HOST: string;
+
   @IsString()
   DB_NAME: string;
 

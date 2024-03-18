@@ -1,20 +1,20 @@
-## Installation
-
-```bash
-$ npm install
-```
-
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# database
+$ npm run db:start
 
-# watch mode
-$ npm run start:dev
+# backend
+$ npm i
+$ npm run dev
+```
 
-# production mode
-$ npm run start:prod
+## Migrations
+```bash
+$ npm run typeorm:run-migrations 
+$ npm run typeorm:generate-migration -n=Name 
+$ npm run typeorm:create-migration -n=Name 
+$ npm run typeorm:revert-migration 
 ```
 
 ## Test

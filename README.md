@@ -17,15 +17,9 @@ $ npm run typeorm:create-migration -n=Name
 $ npm run typeorm:revert-migration 
 ```
 
-## Test
+## Nest
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# create nest component
+$ nest g resource NAME
 ```

@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 
-import { validate } from '@utils/envValidation';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import typeorm from '@configs/typeorm';
 
-import { AppController } from './app.controller';
+import { validate } from '@utils/envValidation';
+
+import { KodikModule } from './kodik/kodik.module';
+import { AnimeModule } from './anime/anime.module';
 
 @Module({
   imports: [
@@ -19,8 +21,10 @@ import { AppController } from './app.controller';
       useFactory: async (configService: ConfigService) =>
         configService.get('typeorm'),
     }),
+    KodikModule,
+    AnimeModule,
   ],
-  controllers: [AppController],
+  controllers: [],
   providers: [],
 })
 export class AppModule {}

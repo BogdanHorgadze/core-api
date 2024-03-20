@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
+import { HttpModule } from '@nestjs/axios';
 
 import { KodikService } from './kodik.service';
-import { KodikController } from './kodik.controller';
 import { KodikWrapperService } from './kodikWrapper.service';
 
 @Module({
-  controllers: [KodikController],
+  imports: [HttpModule],
+  controllers: [],
   providers: [KodikService, KodikWrapperService],
+  exports: [KodikService],
 })
 export class KodikModule {}

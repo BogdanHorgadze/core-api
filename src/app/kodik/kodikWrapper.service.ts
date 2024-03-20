@@ -14,7 +14,7 @@ export class KodikWrapperService {
     }
   }
 
-  getPublicUrl(url: string, extraParams?: Record<string, string>) {
+  getPublicUrl(url: string, extraParams?: Record<string, any>) {
     const base = new URL(url, 'https://kodikapi.com');
     base.searchParams.append('token', this.token);
 

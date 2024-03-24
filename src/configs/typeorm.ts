@@ -1,7 +1,14 @@
 import { registerAs } from '@nestjs/config';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { config as dotenvConfig } from 'dotenv';
-import PostEntity from '@entities/post.entity';
+
+import { AddYearTable1711149413321 } from '@migrations/1711149413321-AddYearTable';
+import { AddGenreTable1711228481191 } from '@migrations/1711228481191-AddGenreTable';
+import { AddAnimeTable1711240119689 } from '@migrations/1711240119689-AddAnimeTable';
+
+import { Year } from '@entities/kodik/Year';
+import { Genre } from '@entities/kodik/Genre';
+import { Anime } from '@entities/kodik/Anime';
 
 dotenvConfig({ path: '.env' });
 
@@ -20,8 +27,12 @@ const config = {
   username: DB_USER,
   password: DB_PASS,
   database: DB_NAME,
-  migrations: [],
-  entities: [PostEntity],
+  migrations: [
+    AddYearTable1711149413321,
+    AddGenreTable1711228481191,
+    AddAnimeTable1711240119689,
+  ],
+  entities: [Year, Genre, Anime],
   synchronize: false,
 };
 

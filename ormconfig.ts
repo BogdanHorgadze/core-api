@@ -14,7 +14,7 @@ const config = new DataSource({
   password: DB_PASS,
   database: DB_NAME,
   migrations: [join(__dirname, 'src/migrations/*.ts')],
-  entities: [join(__dirname, 'src/entities/*.ts')],
+  entities: [join(__dirname, 'src/entities/**/*.ts')],
 });
 
 export default config;

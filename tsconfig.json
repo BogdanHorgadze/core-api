@@ -24,7 +24,7 @@
       "@utils/*": ["src/utils/*"],
       "@configs/*": ["src/configs/*"],
       "@entities/*": ["src/entities/*"],
-      "@migration/*": ["src/migration/*"],
+      "@migrations/*": ["src/migrations/*"],
       "@models/*": ["src/models/*"],
       "@dto/*": ["src/dto/*"],
     }

@@ -12,8 +12,8 @@ $ npm run dev
 ## Migrations
 ```bash
 $ npm run typeorm:run-migrations 
-$ npm run typeorm:generate-migration -n=Name 
-$ npm run typeorm:create-migration -n=Name 
+$ npm run typeorm:generate-migration -name=Name 
+$ npm run typeorm:create-migration -name=Name 
 $ npm run typeorm:revert-migration 
 ```
 
